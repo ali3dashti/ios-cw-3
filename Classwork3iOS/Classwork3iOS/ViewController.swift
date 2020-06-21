@@ -22,12 +22,12 @@ class ViewController: UIViewController {
     @IBAction func Pressbutton(_ sender: Any) {
         Namelabel.text = ""
         
-        var name = NameTextfield.text!
+        let name = NameTextfield.text!
         
         
         // MARK: -  قم باستدعاء الداله هنا
         
-        
+        addName(name: name, helloArray: helloLangauge, flagArray: flagLanguage)
         // MARK: -  النهايه⚠️⚠️لا تقم بغير تحت هذا السطر
         
         
@@ -47,7 +47,11 @@ class ViewController: UIViewController {
     
     
     // MARK: -  قم بكتابة الداله هنا
-    
+    func addName(name: String, helloArray: [String], flagArray:[String] ) {
+        for i in 0..<helloArray.count {
+            greetingArray[i] = "\(helloArray[i]) \(name) \(flagArray[i])"
+        }
+    }
     
     
     // MARK: -   النهايه⚠️⚠️ لا تقوم بغير تحت هذا السطر
